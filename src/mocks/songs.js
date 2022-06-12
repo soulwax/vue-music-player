@@ -19,6 +19,20 @@ const songs = [
     seconds: 222,
     cover: require("../assets/images/pyr.jpg"),
     src: require("../assets/audios/pyr.mp3")
+  },
+  {
+    title: "Deadly Valentine",
+    artist: "Charlotte Gainsbourg",
+    seconds: 233,
+    cover: require("../assets/images/pyr.jpg"),
+    src: require("../assets/audios/pyr.mp3")
+  },
+  {
+    title: "my future",
+    artist: "Billie Eilish",
+    seconds: 208,
+    cover: require("../assets/images/pyr.jpg"),
+    src: require("../assets/audios/pyr.mp3")
   }
 ];
 

@@ -35,7 +35,7 @@
         </div>
         <div class="footer">
           <p>Powered by Nuts</p>
-          <a href="https://github.com/Davigl/vue-music-player" alt="Give a Star" title="Give a Star">
+          <a href="https://github.com/soulwax/vue-music-player" alt="Give a Star" title="Give a Star">
             <font-awesome-icon :icon="['fab', 'github']" />
           </a>
         </div>
