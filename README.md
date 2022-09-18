@@ -5,7 +5,7 @@
 
 <p align="center">
   <a href="https://github.com/soulwax/vue-music-player/commits/master">
-    <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/Davigl/vue-music-player?style=flat-square&color=ff69b4">
+    <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/soulwax/vue-music-player?style=flat-square&color=ff69b4">
   </a>
   
   <a href="https://github.com/soulwax/vue-music-player/stargazers">

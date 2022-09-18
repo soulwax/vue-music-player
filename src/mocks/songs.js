@@ -38,7 +38,7 @@ const songs = [
     title: "Gumball Machine Weekend",
     artist: "Yppah",
     seconds: 239,
-    cover: require("../assets/images/Yppah - Gumball Machine Weekend.jpg"),
+    cover: require("../assets/images/Yppah - Gumball Machine Weekend.jpeg"),
     src: require("../assets/audios/Yppah - Gumball Machine Weekend.mp3")
   },
   {
@@ -59,7 +59,7 @@ const songs = [
     title: "Jetlag Jenny",
     artist: "45ACIDBABIES",
     seconds: 186,
-    cover: require("../assets/images/45ACIDBABIES - Jetlag Jenny.jpg"),
+    cover: require("../assets/images/45ACIDBABIES - Jetlag Jenny.jpeg"),
     src: require("../assets/audios/45ACIDBABIES - Jetlag Jenny.mp3")
   },
   {
