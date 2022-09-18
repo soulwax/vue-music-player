@@ -35,16 +35,16 @@ const songs = [
     src: require("../assets/audios/future.mp3")
   },
   {
-    title: "Ghost",
-    artist: "Machine Girl",
-    seconds: 185,
-    cover: require("../assets/images/Machine Girl - Ghost.jpg"),
-    src: require("../assets/audios/Machine Girl - Ghost.mp3")
+    title: "Gumball Machine Weekend",
+    artist: "Yppah",
+    seconds: 239,
+    cover: require("../assets/images/Yppah - Gumball Machine Weekend.jpg"),
+    src: require("../assets/audios/Yppah - Gumball Machine Weekend.mp3")
   },
   {
-    title: "Yppah - Gumball Machine Weekend",
-    artist: "Ghost",
-    seconds: 239,
+    artist: "Machine Girl",
+    title: "Ghost",
+    seconds: 185,
     cover: require("../assets/images/Machine Girl - Ghost.jpg"),
     src: require("../assets/audios/Machine Girl - Ghost.mp3")
   },
