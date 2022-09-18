@@ -33,7 +33,42 @@ const songs = [
     seconds: 208,
     cover: require("../assets/images/fut.png"),
     src: require("../assets/audios/future.mp3")
-  }
+  },
+  {
+    title: "Ghost",
+    artist: "Machine Girl",
+    seconds: 185,
+    cover: require("../assets/images/Machine Girl - Ghost.jpg"),
+    src: require("../assets/audios/Machine Girl - Ghost.mp3")
+  },
+  {
+    title: "Yppah - Gumball Machine Weekend",
+    artist: "Ghost",
+    seconds: 239,
+    cover: require("../assets/images/Machine Girl - Ghost.jpg"),
+    src: require("../assets/audios/Machine Girl - Ghost.mp3")
+  },
+  {
+    title: "Journal of Ardency",
+    artist: "Class Actress",
+    seconds: 225,
+    cover: require("../assets/images/Class Actress - Journal of Ardency.jpg"),
+    src: require("../assets/audios/Class Actress - Journal of Ardency.mp3")
+  },
+  {
+    title: "Jetlag Jenny",
+    artist: "45ACIDBABIES",
+    seconds: 186,
+    cover: require("../assets/images/45ACIDBABIES - Jetlag Jenny.jpg"),
+    src: require("../assets/audios/45ACIDBABIES - Jetlag Jenny.mp3")
+  },
+  {
+    title: "What Did He Say",
+    artist: "Nite Jewel",
+    seconds: 265,
+    cover: require("../assets/images/Nite Jewel - What Did He Say.jpg"),
+    src: require("../assets/audios/Nite Jewel - What Did He Say.mp3")
+  },
 ];
 
 export default songs;
