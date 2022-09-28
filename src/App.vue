@@ -10,8 +10,12 @@
             {{ current.title }}
           </h2>
           <p class="artist">{{ current.artist }}</p>
-          <KProgress :show-text="false" class="progress-bar-wrapper" v-bind:percent="current.percent"
-            :color="['#df83f1', '#82279f', '#53cfe0']" />
+          <KProgress
+            :show-text="false"
+            class="progress-bar-wrapper"
+            v-bind:percent="current.percent"
+            :color="['#df83f1', '#82279f', '#53cfe0']"
+          />
           <div class="timer">
             <p class="start">{{ currentlyTimer }}</p>
             <p class="end">
@@ -35,7 +39,11 @@
         </div>
         <div class="footer">
           <p>Powered by Nuts</p>
-          <a href="https://github.com/soulwax/vue-music-player" alt="Give a Star" title="Give a Star">
+          <a
+            href="https://github.com/soulwax/vue-music-player"
+            alt="Give a Star"
+            title="Give a Star"
+          >
             <font-awesome-icon :icon="['fab', 'github']" />
           </a>
         </div>
@@ -53,8 +61,13 @@
               {{ song.title }}
             </h2>
             <p class="artist">{{ song.artist }}</p>
-            <KProgress v-if="song.isPlaying" :color="['#df83f1', '#82279f', '#53cfe0']" :show-text="false"
-              class="progress-bar-wrapper" v-bind:percent="song.percent" />
+            <KProgress
+              v-if="song.isPlaying"
+              :color="['#df83f1', '#82279f', '#53cfe0']"
+              :show-text="false"
+              class="progress-bar-wrapper"
+              v-bind:percent="song.percent"
+            />
           </div>
           <div class="actions">
             <button @click="removeSongFromPlaylist(song)" class="delete">
@@ -99,7 +112,7 @@ export default {
       });
       this.player.addEventListener(
         "ended",
-        function () {
+        function() {
           this.next();
         }.bind(this)
       );

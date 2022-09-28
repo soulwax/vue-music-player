@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://192.168.0.9:1212"
+  baseURL: "https://music.madtec.org/api"
 });
 
 export default api;
