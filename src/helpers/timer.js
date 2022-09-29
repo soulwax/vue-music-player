@@ -3,14 +3,14 @@
  * @param {integer} seconds
  */
 
-const formatTimer = seconds => {
-  let minutes = parseInt(seconds / 60).toString();
-  seconds = parseInt(seconds % 60).toString();
+const formatTimer = (seconds) => {
+  let minutes = parseInt(seconds / 60).toString()
+  seconds = parseInt(seconds % 60).toString()
 
-  let output = minutes >= 10 ? `${minutes}` : `0${minutes}`;
-  output += seconds >= 10 ? `:${seconds}` : `:0${seconds}`;
+  let output = minutes >= 10 ? `${minutes}` : `0${minutes}`
+  output += seconds >= 10 ? `:${seconds}` : `:0${seconds}`
 
-  return output;
-};
+  return output
+}
 
-export { formatTimer };
+export { formatTimer }

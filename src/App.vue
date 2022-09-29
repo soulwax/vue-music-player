@@ -39,11 +39,7 @@
         </div>
         <div class="footer">
           <p>Powered by Nuts</p>
-          <a
-            href="https://github.com/soulwax/vue-music-player"
-            alt="Give a Star"
-            title="Give a Star"
-          >
+          <a href="https://github.com/soulwax/vue-music-player" alt="Give a Star" title="Give a Star">
             <font-awesome-icon :icon="['fab', 'github']" />
           </a>
         </div>
@@ -81,109 +77,109 @@
 </template>
 
 <script>
-import KProgress from "k-progress";
+  import KProgress from 'k-progress'
 
-import { formatTimer } from "./helpers/timer";
-import { deleteElement, threatSongs, shuffleArray } from "./helpers/utils";
-import songs from "./mocks/songs";
+  import { formatTimer } from './helpers/timer'
+  import { deleteElement, threatSongs, shuffleArray } from './helpers/utils'
+  import songs from './mocks/songs'
 
-export default {
-  components: { KProgress },
-  name: "App",
-  data() {
-    return {
-      current: {},
-      coverObject: { cover: true, animated: false },
-      index: 0,
-      isPlaying: false,
-      currentlyTimer: "00:00",
-      songs: shuffleArray(songs),
-      player: new Audio()
-    };
-  },
-  methods: {
-    listenersWhenPlay() {
-      this.player.addEventListener("timeupdate", () => {
-        var playerTimer = this.player.currentTime;
-
-        this.currentlyTimer = formatTimer(playerTimer);
-        this.current.percent = (playerTimer * 100) / this.current.seconds;
-        this.current.isPlaying = true;
-      });
-      this.player.addEventListener(
-        "ended",
-        function() {
-          this.next();
-        }.bind(this)
-      );
-    },
-    setCover() {
-      this.coverObject.animated = true;
-
-      setTimeout(() => {
-        this.coverObject.animated = false;
-      }, 1000);
-    },
-    setCurrentSong() {
-      this.current = this.songs[this.index];
-      this.play(this.current);
-      this.setCover();
-    },
-    play(song) {
-      if (typeof song.src !== "undefined") {
-        this.current.isPlaying = false;
-        this.index = this.songs.indexOf(this.current);
-        this.current = song;
-        this.player.src = this.current.src;
+  export default {
+    components: { KProgress },
+    name: 'App',
+    data() {
+      return {
+        current: {},
+        coverObject: { cover: true, animated: false },
+        index: 0,
+        isPlaying: false,
+        currentlyTimer: '00:00',
+        songs: shuffleArray(songs),
+        player: new Audio()
       }
+    },
+    methods: {
+      listenersWhenPlay() {
+        this.player.addEventListener('timeupdate', () => {
+          var playerTimer = this.player.currentTime
 
-      this.player.play();
-      this.isPlaying = true;
+          this.currentlyTimer = formatTimer(playerTimer)
+          this.current.percent = (playerTimer * 100) / this.current.seconds
+          this.current.isPlaying = true
+        })
+        this.player.addEventListener(
+          'ended',
+          function() {
+            this.next()
+          }.bind(this)
+        )
+      },
+      setCover() {
+        this.coverObject.animated = true
 
-      this.setCover();
-      this.listenersWhenPlay();
-    },
-    pause() {
-      this.player.pause();
-      this.isPlaying = false;
-    },
-    next() {
-      this.current.isPlaying = false;
-      this.index = this.songs.indexOf(this.current);
-      this.index++;
-      if (this.index > this.songs.length - 1) {
-        this.index = 0;
-      }
-      this.setCurrentSong();
-    },
-    prev() {
-      this.current.isPlaying = false;
-      this.index = this.songs.indexOf(this.current);
-      this.index--;
-      if (this.index < 0) {
-        this.index = this.songs.length - 1;
-      }
-      this.setCurrentSong();
-    },
-    removeSongFromPlaylist(song) {
-      if (this.songs.length > 1) {
-        if (this.index > 0) {
-          this.index--;
+        setTimeout(() => {
+          this.coverObject.animated = false
+        }, 1000)
+      },
+      setCurrentSong() {
+        this.current = this.songs[this.index]
+        this.play(this.current)
+        this.setCover()
+      },
+      play(song) {
+        if (typeof song.src !== 'undefined') {
+          this.current.isPlaying = false
+          this.index = this.songs.indexOf(this.current)
+          this.current = song
+          this.player.src = this.current.src
         }
-        this.current.isPlaying = false;
-        this.songs = deleteElement(this.songs, song);
-        this.setCurrentSong();
+
+        this.player.play()
+        this.isPlaying = true
+
+        this.setCover()
+        this.listenersWhenPlay()
+      },
+      pause() {
+        this.player.pause()
+        this.isPlaying = false
+      },
+      next() {
+        this.current.isPlaying = false
+        this.index = this.songs.indexOf(this.current)
+        this.index++
+        if (this.index > this.songs.length - 1) {
+          this.index = 0
+        }
+        this.setCurrentSong()
+      },
+      prev() {
+        this.current.isPlaying = false
+        this.index = this.songs.indexOf(this.current)
+        this.index--
+        if (this.index < 0) {
+          this.index = this.songs.length - 1
+        }
+        this.setCurrentSong()
+      },
+      removeSongFromPlaylist(song) {
+        if (this.songs.length > 1) {
+          if (this.index > 0) {
+            this.index--
+          }
+          this.current.isPlaying = false
+          this.songs = deleteElement(this.songs, song)
+          this.setCurrentSong()
+        }
       }
+    },
+    mounted() {
+      this.songs = threatSongs(this.songs)
+      this.current = this.songs[this.index]
+      this.player.src = this.current.src
     }
-  },
-  mounted() {
-    this.songs = threatSongs(this.songs);
-    this.current = this.songs[this.index];
-    this.player.src = this.current.src;
   }
-};
 </script>
 
 <style>
-@import "./assets/styles/main.css";
+  @import './assets/styles/main.css';
 </style>
