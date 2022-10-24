@@ -68,6 +68,20 @@ const songs = [
     seconds: 265,
     cover: require('../assets/images/Nite Jewel - What Did He Say.jpg'),
     src: require('../assets/audios/Nite Jewel - What Did He Say.mp3')
+  },
+  {
+    title: 'Girl I Love You',
+    artist: 'Massive Attack',
+    seconds: 326,
+    cover: require('../assets/images/massive-attack_heligoland.png'),
+    src: require('../assets/audios/MassiveAttack_girlIloveyou.mp3')
+  },
+  {
+    title: `Echo's Answer`,
+    artist: 'Broadcast',
+    seconds: 192,
+    cover: require('../assets/images/Broadcast-HaHaSound.jpeg'),
+    src: require('../assets/audios/Echos-Answer_Broadcast.mp3')
   }
 ]
 
