@@ -82,6 +82,20 @@ const songs = [
     seconds: 192,
     cover: require('../assets/images/Broadcast-HaHaSound.jpeg'),
     src: require('../assets/audios/Echos-Answer_Broadcast.mp3')
+  },
+  {
+    title: `Gabriel (Soulwax Remix)`,
+    artist: `Joe Goddard`,
+    seconds: 271,
+    cover: require('../assets/images/Joe Goddard - Gabriel.jpeg'),
+    src: require('../assets/audios/Gabriel - Soulwax Remix.mp3')
+  },
+  {
+    title: 'Coincidences',
+    artist: 'Lone',
+    seconds: 215,
+    cover: require('../assets/images/Lone - Reality Testing.jpg'),
+    src: require('../assets/audios/Lone - Coincidences.mp3')
   }
 ]
 

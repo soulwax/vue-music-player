@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
+    "pm2": "export NODE_OPTIONS=--openssl-legacy-provider && pm2 start --name=vue-music-service vue-cli-service serve",
     "build": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
     "build-win": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
     "lint": "vue-cli-service lint"
@@ -51,26 +52,5 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ],
-  "prettier": {
-    "arrowParens": "always",
-    "bracketSpacing": true,
-    "endOfLine": "auto",
-    "printWidth": 140,
-    "tabWidth": 2,
-    "useTabs": false,
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "none",
-    "trimTrailingWhitespace": true,
-    "insertPragma": false,
-    "proseWrap": "preserve",
-    "htmlWhitespaceSensitivity": "css",
-    "vueIndentScriptAndStyle": true,
-    "vueIndentHTML": true,
-    "vuePrettier": true,
-    "vueSingleQuote": true,
-    "vueTrailingComma": "none",
-    "vuePrintWidth": 100
-  }
+  ]
 }
