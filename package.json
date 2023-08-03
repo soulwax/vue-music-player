@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "private": true,
   "scripts": {
-    "serve": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
+    "serve": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve --port 3070",
     "pm2": "export NODE_OPTIONS=--openssl-legacy-provider && pm2 start --name=vue-music-service vue-cli-service serve",
     "build": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
     "build-win": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",

@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'https://music.madtec.org/api'
+  baseURL: 'https://api.echoelysium.tech/api'
 })
 
 export default api
